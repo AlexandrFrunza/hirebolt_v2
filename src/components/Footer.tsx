@@ -1,7 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import Container from "./Container";
 import Logo from "./Logo";
-import LinkedinIcon from "./icons/LinkedinIcon";
 
 export default function Footer() {
   return (
@@ -13,26 +13,26 @@ export default function Footer() {
           <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center">
             <Logo />
             <div className="hidden h-10 w-px bg-white sm:block" />
-            <p className="max-w-xs text-sm text-white">
+            <p className="w-[325px] max-w-full text-sm leading-[22px] font-normal text-white">
               AI engineering capacity through verified talent, teams, and
               expert evaluation
             </p>
           </div>
 
-          <div className="flex flex-col flex-wrap gap-10 sm:flex-row sm:items-start">
+          <div className="flex flex-col flex-wrap gap-6 sm:flex-row sm:items-start sm:gap-[23px]">
             <div className="flex flex-col gap-2">
               <p className="text-xs font-medium uppercase tracking-wider text-lime-200">
                 Address
               </p>
               <div className="flex flex-col gap-6 sm:flex-row">
-                <p className="w-48 text-sm text-white">
+                <p className="w-[193px] text-sm text-white">
                   First Floor, 57 Greek Street
                   <br />
                   London
                   <br />
                   W1D 3DX
                 </p>
-                <p className="w-48 text-sm text-white">
+                <p className="w-[194px] text-sm text-white">
                   651 N Broad St
                   <br />
                   Suite 206 Middleton, Delaware
@@ -42,7 +42,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="flex flex-col gap-2">
+            <div className="flex w-[411px] flex-col gap-2">
               <p className="text-xs font-medium uppercase tracking-wider text-lime-200">
                 Contact
               </p>
@@ -53,16 +53,20 @@ export default function Footer() {
               </p>
             </div>
 
-            <div className="flex flex-col gap-2">
+            <div className="w-[193px]" aria-hidden />
+
+            <div className="flex w-[194px] flex-col gap-2">
               <p className="text-xs font-medium uppercase tracking-widest text-lime-200">
                 Social
               </p>
-              <Link
-                href="https://linkedin.com"
-                className="text-white transition-colors hover:text-lime-200"
-                aria-label="LinkedIn"
-              >
-                <LinkedinIcon className="h-6 w-6" />
+              <Link href="https://linkedin.com" aria-label="LinkedIn">
+                <Image
+                  src="/LinkedIn.svg"
+                  alt=""
+                  width={24}
+                  height={24}
+                  className="h-6 w-6"
+                />
               </Link>
             </div>
           </div>

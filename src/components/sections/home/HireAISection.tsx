@@ -22,7 +22,7 @@ const hireFeatures = [
   {
     icon: (
       <Image
-        src="/home/vetted-ai-specialist.png"
+        src="/home/vetted-ai-specialist.svg"
         alt=""
         width={48}
         height={48}
@@ -35,7 +35,7 @@ const hireFeatures = [
   {
     icon: (
       <Image
-        src="/home/multilingual-coverage.png"
+        src="/home/multilingual-coverage.svg"
         alt=""
         width={48}
         height={48}
@@ -48,7 +48,7 @@ const hireFeatures = [
   {
     icon: (
       <Image
-        src="/home/ai-delivery-capacity.png"
+        src="/home/ai-delivery-capacity.svg"
         alt=""
         width={48}
         height={48}
@@ -59,7 +59,14 @@ const hireFeatures = [
       "Add flexible engineering teams that integrate directly into your standups, tools, and workflows.",
   },
   {
-    icon: <Image src="/home/plan.png" alt="" width={48} height={48} />,
+    icon: (
+      <Image
+        src="/home/expert-evaluation.svg"
+        alt=""
+        width={48}
+        height={48}
+      />
+    ),
     title: "Expert evaluation",
     description:
       "Access deep technical reviewers and AI-specific evaluators for projects where quality matters.",
@@ -71,20 +78,22 @@ export default function HireAISection() {
     <section className="pt-28 pb-24">
       <Container className="flex flex-col gap-16">
         <div className="flex flex-col gap-16">
-          <div className="flex flex-col gap-8">
-            <SectionLabel>Hire AI</SectionLabel>
-            <div className="flex flex-col gap-4">
-              <h2 className="max-w-[845px] text-3xl font-medium text-white">
-                Find the engineers, AI specialists, and domain experts you
-                need to build, launch, and scale AI products.
-              </h2>
-              <p className="max-w-[845px] text-base font-medium leading-6 text-zinc-400">
-                Access a global network of engineers and AI professionals
-                across software, machine learning, data, and AI
-                implementation. Review pre-vetted profiles, shortlist
-                candidates immediately, and add capacity to your team without
-                lengthy hiring cycles.
-              </p>
+          <div className="flex flex-col gap-16">
+            <div className="flex flex-col gap-8">
+              <SectionLabel>Hire AI</SectionLabel>
+              <div className="flex flex-col gap-4">
+                <h2 className="w-[845px] max-w-full text-[32px] leading-9 font-medium text-white">
+                  Find the engineers, AI specialists, and domain experts you
+                  need to build, launch, and scale AI products.
+                </h2>
+                <p className="w-[845px] max-w-full text-base leading-6 font-medium text-[#B9B9B9]">
+                  Access a global network of engineers and AI professionals
+                  across software, machine learning, data, and AI
+                  implementation. Review pre-vetted profiles, shortlist
+                  candidates immediately, and add capacity to your team
+                  without lengthy hiring cycles.
+                </p>
+              </div>
             </div>
             <div className="flex flex-wrap gap-1.5">
               {hireSkills.map((skill) => (

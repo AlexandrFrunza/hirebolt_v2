@@ -35,7 +35,7 @@ export default function WhyHirebolt() {
             Built specifically for AI development and model training
           </h2>
         </div>
-        <div className="-mx-6 flex w-[calc(100%+3rem)] flex-wrap gap-6 lg:-mx-8 lg:w-[calc(100%+4rem)]">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {whyHirebolt.map((item, index) => (
             <NumberedCard key={item.title} number={index + 1} {...item} />
           ))}

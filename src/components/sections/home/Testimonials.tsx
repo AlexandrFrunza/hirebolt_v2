@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Container from "@/components/Container";
 import TestimonialCard from "@/components/TestimonialCard";
 
@@ -27,19 +27,31 @@ const testimonials = [
   },
 ];
 
-const CARD_WIDTH = 628;
 const GAP = 24;
-const STEP = CARD_WIDTH + GAP;
 const MAX_PAGE = testimonials.length - 2;
 const DRAG_THRESHOLD = 80;
 
 export default function Testimonials() {
   const [page, setPage] = useState(0);
   const [dragOffset, setDragOffset] = useState(0);
+  const [cardWidth, setCardWidth] = useState(0);
+  const viewportRef = useRef<HTMLDivElement>(null);
   const dragState = useRef<{ startX: number; dragging: boolean }>({
     startX: 0,
     dragging: false,
   });
+
+  useEffect(() => {
+    const el = viewportRef.current;
+    if (!el) return;
+    const updateWidth = () => setCardWidth((el.clientWidth - GAP) / 2);
+    updateWidth();
+    const observer = new ResizeObserver(updateWidth);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  const step = cardWidth + GAP;
 
   const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
     dragState.current = { startX: e.clientX, dragging: true };
@@ -62,7 +74,7 @@ export default function Testimonials() {
     setDragOffset(0);
   };
 
-  const translate = -page * STEP + dragOffset;
+  const translate = -page * step + dragOffset;
 
   return (
     <section className="py-24">
@@ -74,7 +86,8 @@ export default function Testimonials() {
         </div>
 
         <div
-          className="hidden w-[1280px] max-w-[calc(100vw-3rem)] -mx-6 cursor-grab touch-pan-y overflow-hidden select-none active:cursor-grabbing sm:block lg:max-w-[calc(100vw-4rem)] lg:-mx-8"
+          ref={viewportRef}
+          className="hidden w-full cursor-grab touch-pan-y overflow-hidden select-none active:cursor-grabbing sm:block"
           onPointerDown={handlePointerDown}
           onPointerMove={handlePointerMove}
           onPointerUp={endDrag}
@@ -92,7 +105,8 @@ export default function Testimonials() {
             {testimonials.map((testimonial) => (
               <div
                 key={testimonial.role}
-                className="w-[628px] shrink-0"
+                className="shrink-0"
+                style={{ width: cardWidth }}
               >
                 <TestimonialCard {...testimonial} />
               </div>

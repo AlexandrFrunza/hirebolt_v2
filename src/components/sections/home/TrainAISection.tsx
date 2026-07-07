@@ -39,11 +39,11 @@ export default function TrainAISection() {
           <div className="flex flex-col gap-8">
             <SectionLabel>Train AI</SectionLabel>
             <div className="flex flex-col gap-4">
-              <h2 className="max-w-3xl text-3xl font-medium text-white">
+              <h2 className="w-[845px] max-w-full text-[32px] leading-9 font-medium text-white">
                 Build better models with expert-led training data,
                 evaluations, and human feedback workflows.
               </h2>
-              <p className="max-w-3xl text-base font-medium text-zinc-400">
+              <p className="w-[845px] max-w-full text-base leading-6 font-medium text-[#B9B9B9]">
                 We build custom evaluations, private benchmarks, and
                 high-quality post-training datasets — SFT, RLHF, and RL
                 environments — to help AI labs advance model capabilities
@@ -51,7 +51,7 @@ export default function TrainAISection() {
               </p>
             </div>
           </div>
-          <div className="flex flex-wrap gap-6">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {trainTags.map((item) => (
               <TagCard key={item.tag} {...item} />
             ))}

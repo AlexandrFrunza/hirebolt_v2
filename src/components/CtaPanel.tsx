@@ -32,10 +32,12 @@ export default function CtaPanel({
       )}
       <div className="relative flex flex-col gap-8">
         <div className="flex max-w-2xl flex-col gap-4">
-          <h2 className="font-display text-3xl font-bold leading-9">
+          <h2 className="font-display text-[32px] leading-9 font-bold">
             {title}
           </h2>
-          <p className="text-xl font-medium text-slate-300">{description}</p>
+          <p className="text-xl leading-8 font-medium text-[#BECAD2]">
+            {description}
+          </p>
         </div>
         <div className="flex flex-wrap items-center gap-8">
           <Button href={buttonHref}>{buttonLabel}</Button>

@@ -31,7 +31,7 @@ export default function IconFeatureCard({
           <p className="font-display text-xl leading-6 font-bold text-white">
             {title}
           </p>
-          <p className="text-base leading-6 text-[#D9D9D9]">{description}</p>
+          <p className="text-base leading-6 text-zinc-300">{description}</p>
         </div>
       </div>
     </div>

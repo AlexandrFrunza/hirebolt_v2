@@ -21,19 +21,19 @@ const buildTags = [
 
 const buildFeatures = [
   {
-    icon: <Image src="/home/plan.png" alt="" width={48} height={48} />,
+    icon: <Image src="/home/plan.svg" alt="" width={48} height={48} />,
     title: "Plan",
     description:
       "Identify the right use cases, models, and workflows for your business. We help define where AI creates value and what it takes to ship it properly.",
   },
   {
-    icon: <Image src="/home/build.png" alt="" width={48} height={48} />,
+    icon: <Image src="/home/build.svg" alt="" width={48} height={48} />,
     title: "Build",
     description:
       "Develop production-ready AI applications powered by frontier models. From RAG pipelines to autonomous agents, we move from concept to working product fast.",
   },
   {
-    icon: <Image src="/home/improve.png" alt="" width={48} height={48} />,
+    icon: <Image src="/home/improve.svg" alt="" width={48} height={48} />,
     title: "Improve",
     description:
       "Refine prompts, model behavior, and system performance over time. We help improve accuracy, reduce costs, and adapt AI systems to changing requirements.",
@@ -48,29 +48,29 @@ export default function BuildAISection() {
           <div className="flex flex-col gap-8">
             <SectionLabel>Build AI</SectionLabel>
             <div className="flex flex-col gap-4">
-              <h2 className="max-w-3xl text-3xl font-medium text-white">
+              <h2 className="w-[845px] max-w-full text-[32px] leading-9 font-medium text-white">
                 Turn raw models into secure enterprise software, automated
                 workflows, and reliable user experiences.
               </h2>
-              <p className="max-w-3xl text-base font-medium text-zinc-400">
+              <p className="w-[845px] max-w-full text-base leading-6 font-medium text-[#B9B9B9]">
                 Whether you are deploying custom agents, secure retrieval
                 systems, or smart automation, Hirebolt handles the
                 engineering required to transition your AI experiments into
                 resilient, everyday business tools.
               </p>
             </div>
-            <div className="flex flex-wrap gap-2">
-              {buildTags.map((tag) => (
-                <Pill key={tag}>{tag}</Pill>
-              ))}
-            </div>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {buildTags.map((tag) => (
+              <Pill key={tag}>{tag}</Pill>
+            ))}
           </div>
           <div className="flex flex-wrap gap-6">
             {buildFeatures.map((feature) => (
               <IconFeatureCard
                 key={feature.title}
                 layout="col"
-                className="!grow-0 w-96 basis-auto"
+                className="basis-72"
                 {...feature}
               />
             ))}
