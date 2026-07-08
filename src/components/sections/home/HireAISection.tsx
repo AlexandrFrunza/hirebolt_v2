@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Search } from "lucide-react";
 import Container from "@/components/Container";
 import Button from "@/components/Button";
 import Pill from "@/components/Pill";
@@ -73,16 +74,68 @@ const hireFeatures = [
   },
 ];
 
+const hireFeaturesMobile = [
+  {
+    icon: (
+      <Image
+        src="/home/vetted-ai-specialist.svg"
+        alt=""
+        width={48}
+        height={48}
+      />
+    ),
+    title: "Vetted global network",
+    description:
+      "Pre-screened engineers and AI specialists across multiple regions and time zones.",
+  },
+  {
+    icon: <Search className="h-12 w-12" strokeWidth={1.75} />,
+    title: "Search in seconds",
+    description:
+      "Find relevant talent by skills, AI expertise, availability, and location.",
+  },
+  {
+    icon: (
+      <Image
+        src="/home/ai-delivery-capacity.svg"
+        alt=""
+        width={48}
+        height={48}
+      />
+    ),
+    title: "AI delivery capacity",
+    description:
+      "Add flexible engineering teams that integrate directly into your standups, tools, and workflows.",
+  },
+  {
+    icon: (
+      <Image
+        src="/home/expert-evaluation.svg"
+        alt=""
+        width={48}
+        height={48}
+      />
+    ),
+    title: "Expert evaluation",
+    description:
+      "Access deep technical reviewers and AI-specific evaluators for projects where quality matters.",
+  },
+];
+
 export default function HireAISection() {
   return (
-    <section className="pt-28 pb-24">
-      <Container className="flex flex-col gap-16">
+    <section className="pt-12 pb-16 sm:pt-28 sm:pb-24">
+      <Container className="flex flex-col gap-12 sm:gap-16">
         <div className="flex flex-col gap-16">
-          <div className="flex flex-col gap-16">
+          <div className="flex flex-col gap-12 sm:gap-16">
             <div className="flex flex-col gap-8">
               <SectionLabel>Hire AI</SectionLabel>
               <div className="flex flex-col gap-4">
-                <h2 className="w-[845px] max-w-full text-[32px] leading-9 font-medium text-white">
+                <h2 className="w-[845px] max-w-full text-2xl leading-8 font-medium text-white sm:hidden">
+                  Find the engineers, AI specialists, and delivery teams you
+                  need to build, launch, and scale AI products.
+                </h2>
+                <h2 className="hidden w-[845px] max-w-full text-[32px] leading-9 font-medium text-white sm:block">
                   Find the engineers, AI specialists, and domain experts you
                   need to build, launch, and scale AI products.
                 </h2>
@@ -95,13 +148,23 @@ export default function HireAISection() {
                 </p>
               </div>
             </div>
-            <div className="flex flex-wrap gap-1.5">
+            <div className="flex flex-wrap gap-1 sm:gap-1.5">
               {hireSkills.map((skill) => (
                 <Pill key={skill}>{skill}</Pill>
               ))}
             </div>
           </div>
-          <div className="flex flex-wrap gap-6">
+          <div className="-mr-6 flex snap-x snap-mandatory items-start gap-4 overflow-x-auto sm:hidden [&::-webkit-scrollbar]:hidden">
+            {hireFeaturesMobile.map((feature) => (
+              <IconFeatureCard
+                key={feature.title}
+                layout="row"
+                className="!w-[312px] !shrink-0 !grow-0 !basis-auto snap-start"
+                {...feature}
+              />
+            ))}
+          </div>
+          <div className="hidden flex-wrap gap-6 sm:flex">
             {hireFeatures.map((feature) => (
               <IconFeatureCard
                 key={feature.title}
@@ -112,7 +175,7 @@ export default function HireAISection() {
             ))}
           </div>
         </div>
-        <Button href="/hire-ai-talent" className="self-start">
+        <Button href="/hire-ai-talent" className="w-full sm:w-auto sm:self-start">
           Search AI Talent Instantly
         </Button>
       </Container>

@@ -3,7 +3,7 @@ import CtaPanel from "@/components/CtaPanel";
 
 export default function ClosingCta() {
   return (
-    <section className="py-28">
+    <section className="pt-12 pb-16 sm:pt-28 sm:pb-28">
       <Container>
         <CtaPanel
           title={
@@ -18,6 +18,8 @@ export default function ClosingCta() {
           }
           description="Partner with Hirebolt to accelerate frontier research, scale your post-training datasets, or bring in specialized AI-native engineering talent."
           buttonLabel="Get started"
+          mobileButtonLabel="Start a project"
+          mobileSecondaryLabel="Talk to an expert"
           showDecoration
         />
       </Container>

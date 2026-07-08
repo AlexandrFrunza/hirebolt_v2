@@ -27,19 +27,19 @@ const trainTags = [
   {
     tag: "Robotics",
     description:
-      "VLA data packs, simulation trajectories, and teleoperation setups",
+      "VLA data packs, simulation trajec­tories, and teleoperation setups",
   },
 ];
 
 export default function TrainAISection() {
   return (
-    <section className="pt-28 pb-24">
-      <Container className="flex flex-col gap-16">
-        <div className="flex flex-col gap-16">
+    <section className="pt-12 pb-16 sm:pt-28 sm:pb-24">
+      <Container className="flex flex-col gap-12 sm:gap-16">
+        <div className="flex flex-col gap-20 sm:gap-16">
           <div className="flex flex-col gap-8">
             <SectionLabel>Train AI</SectionLabel>
             <div className="flex flex-col gap-4">
-              <h2 className="w-[845px] max-w-full text-[32px] leading-9 font-medium text-white">
+              <h2 className="w-[845px] max-w-full text-2xl leading-8 font-medium text-white sm:text-[32px] sm:leading-9">
                 Build better models with expert-led training data,
                 evaluations, and human feedback workflows.
               </h2>
@@ -51,13 +51,22 @@ export default function TrainAISection() {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="-mr-6 flex snap-x snap-mandatory items-start gap-4 overflow-x-auto sm:hidden [&::-webkit-scrollbar]:hidden">
+            {trainTags.map((item) => (
+              <TagCard
+                key={item.tag}
+                className="!w-[312px] shrink-0 snap-start"
+                {...item}
+              />
+            ))}
+          </div>
+          <div className="hidden sm:grid sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
             {trainTags.map((item) => (
               <TagCard key={item.tag} {...item} />
             ))}
           </div>
         </div>
-        <Button href="/train-ai" className="self-start">
+        <Button href="/train-ai" className="w-full sm:w-auto sm:self-start">
           Explore Train AI Solutions
         </Button>
       </Container>

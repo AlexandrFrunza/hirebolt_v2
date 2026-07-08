@@ -7,7 +7,7 @@ export type Stat = {
 
 export default function StatRow({ stats }: { stats: Stat[] }) {
   return (
-    <div className="flex w-full flex-col items-center gap-6 sm:flex-row">
+    <div className="flex w-full flex-col items-stretch gap-4 sm:flex-row sm:items-center sm:gap-6">
       {stats.map((stat) => (
         <StatCard key={stat.label} {...stat} />
       ))}

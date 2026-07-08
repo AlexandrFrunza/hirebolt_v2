@@ -15,10 +15,14 @@ export default function IconFeatureCard({
 }) {
   return (
     <div
-      className={`flex-1 rounded-2xl bg-white/10 p-8 outline outline-1 -outline-offset-1 outline-white/5 ${className}`}
+      className={`flex-1 rounded-2xl bg-white/10 p-6 outline outline-1 -outline-offset-1 outline-white/5 sm:p-8 ${className}`}
     >
       <div
-        className={`flex ${layout === "row" ? "flex-row items-center gap-6" : "flex-col gap-6"}`}
+        className={`flex ${
+          layout === "row"
+            ? "flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-6"
+            : "flex-col gap-6"
+        }`}
       >
         <div
           className={`flex shrink-0 items-center justify-center text-lime-200 [&>img]:h-12 [&>img]:w-12 [&>img]:shrink-0 [&>img]:object-contain [&>svg]:h-12 [&>svg]:w-12 [&>svg]:shrink-0 ${
@@ -28,7 +32,11 @@ export default function IconFeatureCard({
           {icon}
         </div>
         <div className="flex flex-col gap-2">
-          <p className="font-display text-xl leading-6 font-bold text-white">
+          <p
+            className={`font-display text-xl font-bold text-white ${
+              layout === "row" ? "leading-7 sm:leading-6" : "leading-6"
+            }`}
+          >
             {title}
           </p>
           <p className="text-base leading-6 text-zinc-300">{description}</p>

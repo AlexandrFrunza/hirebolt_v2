@@ -27,15 +27,25 @@ const whyHirebolt = [
 
 export default function WhyHirebolt() {
   return (
-    <section className="pt-24 pb-28">
-      <Container className="flex flex-col gap-16">
+    <section className="pt-12 pb-12 sm:pt-24 sm:pb-28">
+      <Container className="flex flex-col gap-12 sm:gap-16">
         <div className="flex w-[737px] max-w-full flex-col gap-4">
           <Eyebrow>Why Hirebolt</Eyebrow>
-          <h2 className="font-display text-5xl font-bold leading-[56px] text-white">
+          <h2 className="font-display text-3xl leading-9 font-bold text-white sm:text-5xl sm:leading-[56px]">
             Built specifically for AI development and model training
           </h2>
         </div>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <div className="-mr-6 flex snap-x snap-mandatory gap-4 overflow-x-auto sm:hidden [&::-webkit-scrollbar]:hidden">
+          {whyHirebolt.map((item, index) => (
+            <NumberedCard
+              key={item.title}
+              number={index + 1}
+              className="h-[420px] w-[312px] shrink-0 snap-start"
+              {...item}
+            />
+          ))}
+        </div>
+        <div className="hidden sm:grid sm:grid-cols-2 sm:gap-6">
           {whyHirebolt.map((item, index) => (
             <NumberedCard key={item.title} number={index + 1} {...item} />
           ))}

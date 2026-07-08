@@ -5,6 +5,7 @@
   --font-display: var(--font-fraunces);
   --color-lime-200: #ddf0a7;
   --color-slate-800: #1f3847;
+  --color-neutral-900: #151515;
 }
 
 body {
@@ -15,4 +16,30 @@ body {
   font-optical-sizing: none;
   font-variation-settings: "opsz" 9;
   letter-spacing: -0.02em;
+}
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.marquee-left-animate {
+  animation: marquee-left 20s linear infinite;
+}
+
+.marquee-right-animate {
+  animation: marquee-right 20s linear infinite;
 }

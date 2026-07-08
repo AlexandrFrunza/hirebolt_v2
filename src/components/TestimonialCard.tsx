@@ -23,13 +23,17 @@ export default function TestimonialCard({
       <div className="flex flex-1 flex-col justify-between gap-6">
         <div className="flex flex-col gap-3">
           <p className="text-2xl font-medium text-white">{quote}</p>
-          <p className="text-base font-medium text-zinc-400">{body}</p>
+          <p className="text-sm leading-6 font-medium text-zinc-400 sm:text-base">
+            {body}
+          </p>
         </div>
         <div className="flex flex-col gap-1">
           <p className="text-xs font-medium uppercase tracking-widest text-lime-200">
             {role}
           </p>
-          <p className="text-sm text-zinc-400">{company}</p>
+          <p className="text-sm leading-5 text-white sm:text-zinc-400">
+            {company}
+          </p>
         </div>
       </div>
     </div>
