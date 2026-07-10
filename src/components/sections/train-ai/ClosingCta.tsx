@@ -16,6 +16,7 @@ export default function ClosingCta() {
           buttonHref="/contact"
           secondaryLabel="Talk to an expert"
           secondaryHref="/contact"
+          showDecoration
         />
       </Container>
     </section>

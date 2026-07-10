@@ -15,8 +15,10 @@ export default function WorkDoneSection() {
             multilingual review, and scalable training.
           </p>
         </div>
-        <CaseStudyCarousel />
       </Container>
+      <div className="mt-16 w-full pl-[max(24px,calc((100vw-1344px)/2+24px))] lg:pl-[max(32px,calc((100vw-1344px)/2+32px))]">
+        <CaseStudyCarousel />
+      </div>
     </section>
   );
 }

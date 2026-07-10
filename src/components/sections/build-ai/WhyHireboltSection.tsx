@@ -39,7 +39,7 @@ export default function WhyHireboltSection() {
             <span className="text-lime-200">Outcome-focused.</span>
           </h2>
         </div>
-        <div className="flex flex-wrap gap-6">
+        <div className="grid grid-cols-2 gap-6">
           {whyHirebolt.map((item, index) => (
             <NumberedCard key={item.title} number={index + 1} {...item} />
           ))}

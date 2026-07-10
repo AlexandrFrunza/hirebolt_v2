@@ -28,7 +28,7 @@ export default function StatsSection() {
               key={stat.title}
               className="flex-1 basis-72 rounded-2xl bg-slate-800 p-6 outline outline-1 -outline-offset-1 outline-white/5"
             >
-              <p className="font-display text-xl font-bold text-white">
+              <p className="font-display text-xl leading-6 font-bold text-white">
                 {stat.title}
               </p>
               <p className="mt-2 text-base font-medium text-slate-300">

@@ -16,10 +16,12 @@ export default function SolutionStepCard({
           {number}.
         </span>
         <div className="flex flex-col items-start gap-4">
-          <p className="font-display text-xl font-bold text-white">
-            {title}
-          </p>
-          <p className="text-base text-white">{description}</p>
+          <div className="flex flex-col items-start gap-2">
+            <p className="font-display text-xl font-bold text-white">
+              {title}
+            </p>
+            <p className="text-base text-white">{description}</p>
+          </div>
           <span className="inline-flex items-center rounded-lg bg-white/10 px-3 py-2 text-xs font-medium uppercase tracking-widest text-white">
             {tag}
           </span>

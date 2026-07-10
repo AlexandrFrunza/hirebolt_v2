@@ -12,7 +12,6 @@ const products = [
     category: "Advanced RAG systems",
     description:
       "Build high-precision Retrieval-Augmented Generation architectures to safely query dense enterprise documentation without data leaks.",
-    featured: true,
   },
   {
     category: "Workflow automation",
@@ -49,8 +48,8 @@ export default function ProductsSection() {
             <ProductCard key={product.category} {...product} />
           ))}
         </div>
-        <div className="flex max-w-2xl flex-col items-start gap-6">
-          <p className="text-base font-medium text-white">
+        <div className="flex w-[628px] max-w-full flex-col items-start gap-6">
+          <p className="text-base leading-6 font-medium text-white">
             Don&apos;t see your specific use case?
           </p>
           <Button href="/contact">Request a custom build</Button>

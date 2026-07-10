@@ -1,8 +1,8 @@
+import Image from "next/image";
 import Container from "@/components/Container";
 import Button from "@/components/Button";
 import TextLink from "@/components/TextLink";
 import CheckPill from "@/components/CheckPill";
-import HeroDecoration from "@/components/HeroDecoration";
 
 const heroChecklist = [
   "SFT, RLHF & RL environments",
@@ -14,16 +14,32 @@ const heroChecklist = [
 export default function Hero() {
   return (
     <section className="relative overflow-hidden pt-32 pb-24">
-      <HeroDecoration />
+      <div
+        className="pointer-events-none absolute top-[190px] right-[-34px] hidden h-64 w-72 lg:block"
+        aria-hidden
+      >
+        <Image
+          src="/hero-decoration.svg"
+          alt=""
+          fill
+          className="object-contain"
+        />
+      </div>
       <Container className="flex flex-col items-center gap-16 text-center">
         <div className="flex items-center gap-3">
           <span className="text-base text-white">Backed by</span>
-          <span className="text-base font-bold text-white">Y Combinator</span>
+          <Image
+            src="/y_combinator_logo.png"
+            alt="Y Combinator"
+            width={416}
+            height={87}
+            className="h-[21.6px] w-auto shrink-0"
+          />
         </div>
 
         <div className="flex flex-col items-center gap-24">
           <div className="flex flex-col items-center gap-6">
-            <h1 className="font-display text-4xl font-black leading-tight sm:text-6xl sm:leading-[64px]">
+            <h1 className="font-display text-4xl font-black leading-tight sm:text-[56px] sm:leading-[64px]">
               <span className="text-white">Human intelligence</span>
               <br />
               <span className="text-lime-200">

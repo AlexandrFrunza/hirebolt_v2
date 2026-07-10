@@ -1,6 +1,7 @@
 import Hero from "@/components/sections/train-ai/Hero";
 import StatsSection from "@/components/sections/train-ai/StatsSection";
 import TrainingDomainsSection from "@/components/sections/train-ai/TrainingDomainsSection";
+import HowWeWorkSection from "@/components/sections/train-ai/HowWeWorkSection";
 import TalentSection from "@/components/sections/train-ai/TalentSection";
 import WhyChooseSection from "@/components/sections/train-ai/WhyChooseSection";
 import ComplianceSection from "@/components/sections/train-ai/ComplianceSection";
@@ -13,6 +14,7 @@ export default function TrainAI() {
       <Hero />
       <StatsSection />
       <TrainingDomainsSection />
+      <HowWeWorkSection />
       <TalentSection />
       <WhyChooseSection />
       <ComplianceSection />

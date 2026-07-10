@@ -23,24 +23,24 @@ export default function CaseStudyCard({
 
       <div className="flex flex-col gap-4 rounded-lg bg-white/10 px-6 py-4 outline outline-1 -outline-offset-1 outline-white/5">
         <div className="flex flex-col gap-4 sm:flex-row sm:gap-8">
-          <p className="flex-1 text-base font-medium">
+          <p className="flex-1 text-base leading-6 font-medium">
             <span className="text-lime-200">Industry: </span>
-            <span className="text-zinc-300">{industry}</span>
+            <span className="tracking-[-0.48px] text-[#D9D9D9]">{industry}</span>
           </p>
-          <p className="flex-1 text-base font-medium">
+          <p className="flex-1 text-base leading-6 font-medium">
             <span className="text-lime-200">Team size: </span>
-            <span className="text-zinc-300">{teamSize}</span>
+            <span className="tracking-[-0.48px] text-[#D9D9D9]">{teamSize}</span>
           </p>
         </div>
         <div className="h-px w-full bg-white/10" />
         <div className="flex flex-col gap-4 sm:flex-row sm:gap-8">
-          <p className="flex-1 text-base font-medium">
+          <p className="flex-1 text-base leading-6 font-medium">
             <span className="text-lime-200">Project duration: </span>
-            <span className="text-zinc-300">{duration}</span>
+            <span className="tracking-[-0.48px] text-[#D9D9D9]">{duration}</span>
           </p>
-          <p className="flex-1 text-base font-medium">
+          <p className="flex-1 text-base leading-6 font-medium">
             <span className="text-lime-200">Focus: </span>
-            <span className="text-zinc-300">{focus}</span>
+            <span className="tracking-[-0.48px] text-[#D9D9D9]">{focus}</span>
           </p>
         </div>
       </div>

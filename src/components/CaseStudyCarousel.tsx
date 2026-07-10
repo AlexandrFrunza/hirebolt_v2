@@ -25,7 +25,7 @@ export default function CaseStudyCarousel() {
   };
 
   return (
-    <div className="flex w-full min-w-0 flex-col items-center gap-8">
+    <div className="flex w-full min-w-0 flex-col items-start gap-8">
       <div
         ref={trackRef}
         onScroll={handleScroll}
@@ -35,7 +35,7 @@ export default function CaseStudyCarousel() {
           <CaseStudyCard key={study.title} {...study} />
         ))}
       </div>
-      <div className="flex -rotate-0 gap-2">
+      <div className="flex w-full max-w-[1280px] justify-center gap-2">
         {caseStudies.map((_, index) => (
           <button
             key={index}

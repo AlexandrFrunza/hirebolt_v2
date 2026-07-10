@@ -14,6 +14,7 @@ export default function CtaPanel({
   mobileSecondaryLabel,
   mobileSecondaryHref = "/contact",
   showDecoration = false,
+  decorationDesktopClassName = "right-[-32px] bottom-[-112px]",
 }: {
   title: ReactNode;
   description: string;
@@ -25,11 +26,12 @@ export default function CtaPanel({
   mobileSecondaryLabel?: string;
   mobileSecondaryHref?: string;
   showDecoration?: boolean;
+  decorationDesktopClassName?: string;
 }) {
   const hasMobileOverride = Boolean(mobileButtonLabel);
 
   return (
-    <div className="relative overflow-hidden rounded-2xl bg-slate-800 p-8 pb-[88px] outline outline-1 -outline-offset-1 outline-white/5 sm:p-12 sm:pb-12">
+    <div className="relative overflow-hidden rounded-2xl bg-slate-800 p-8 pb-[88px] outline outline-1 -outline-offset-1 outline-white/5 sm:px-12 sm:py-10">
       {showDecoration && (
         <>
           <div
@@ -44,7 +46,7 @@ export default function CtaPanel({
             />
           </div>
           <div
-            className="pointer-events-none absolute right-[-32px] bottom-[-112px] hidden sm:block"
+            className={`pointer-events-none absolute hidden sm:block ${decorationDesktopClassName}`}
             aria-hidden
           >
             <Image src="/cta-decoration.svg" alt="" width={347} height={398} />
@@ -52,11 +54,11 @@ export default function CtaPanel({
         </>
       )}
       <div className="relative flex flex-col gap-16 sm:gap-8">
-        <div className="flex max-w-2xl flex-col gap-4">
+        <div className="flex flex-col gap-4">
           <h2 className="font-display text-[32px] leading-9 font-bold">
             {title}
           </h2>
-          <p className="text-base leading-6 font-medium text-[#BECAD2] sm:text-xl sm:leading-8">
+          <p className="max-w-[702px] text-base leading-6 font-medium text-[#BECAD2] sm:text-xl sm:leading-8">
             {description}
           </p>
         </div>

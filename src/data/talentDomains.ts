@@ -185,7 +185,7 @@ export const talentDomains: TalentDomain[] = [
         name: "Milica P.",
         role: "Data Engineer",
         education: "MSc Computer Science, University of Belgrade",
-        skills: ["SQL", "Kafka", "Snowflake", "Data Quality"],
+        skills: ["SQL", "Kafka", "Snowflake", "Data Warehousing", "Data Quality"],
         description:
           "Automated data validation and ingestion pipelines for large-scale AI datasets.",
       },

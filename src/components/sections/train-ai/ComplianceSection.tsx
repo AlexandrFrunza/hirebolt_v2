@@ -49,7 +49,7 @@ export default function ComplianceSection() {
   return (
     <section className="py-28">
       <Container className="flex flex-col gap-16">
-        <p className="max-w-3xl text-3xl font-medium">
+        <p className="w-[737px] max-w-full text-[32px] leading-9 font-medium">
           <span className="text-white">AI training data is sensitive. </span>
           <span className="text-lime-200">
             We treat it with enterprise-grade security and full compliance.

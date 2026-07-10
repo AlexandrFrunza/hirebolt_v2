@@ -1,7 +1,35 @@
 "use client";
 
-import { useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { talentDomains } from "@/data/talentDomains";
+
+function EducationText({ education }: { education: string }) {
+  const containerRef = useRef<HTMLParagraphElement>(null);
+  const institutionRef = useRef<HTMLSpanElement>(null);
+  const [fits, setFits] = useState(true);
+  const commaIndex = education.indexOf(", ");
+  const degree = education.slice(0, commaIndex + 1);
+  const institution = education.slice(commaIndex + 2);
+
+  useLayoutEffect(() => {
+    const container = containerRef.current;
+    const el = institutionRef.current;
+    if (container && el) setFits(el.scrollWidth <= container.clientWidth - 10);
+  }, [education]);
+
+  if (commaIndex === -1) return <>{education}</>;
+
+  if (!fits) return <>{education}</>;
+
+  return (
+    <span ref={containerRef} className="block">
+      <span className="block">{degree}</span>
+      <span ref={institutionRef} className="inline-block whitespace-nowrap">
+        {institution}
+      </span>
+    </span>
+  );
+}
 
 export default function TalentCards() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -17,17 +45,17 @@ export default function TalentCards() {
                 key={d.label}
                 type="button"
                 onClick={() => setActiveIndex(index)}
-                className={`rounded-lg px-3 py-2 text-xs font-medium uppercase tracking-widest transition-colors ${
+                className={`rounded-lg px-3 py-2 text-xs leading-4 font-medium tracking-[1.92px] uppercase outline outline-1 -outline-offset-1 outline-white/5 transition-colors ${
                   index === activeIndex
                     ? "bg-white text-neutral-900"
-                    : "bg-white/10 text-white outline outline-1 -outline-offset-1 outline-white/5 hover:bg-white/20"
+                    : "bg-white/10 text-white hover:bg-white/20"
                 }`}
               >
                 {d.label}
               </button>
             ))}
           </div>
-          <div className="flex-1 rounded-lg bg-white/10 p-6 text-center text-base font-medium text-white shadow-[0px_20px_24px_-4px_rgba(16,24,40,0.08),0px_8px_8px_-4px_rgba(16,24,40,0.03)] outline outline-1 -outline-offset-1 outline-white/5 lg:self-stretch lg:flex lg:items-center lg:justify-center">
+          <div className="flex w-[580px] flex-col items-center justify-center gap-2.5 rounded-lg bg-white/10 p-6 text-center text-base leading-6 font-medium text-white shadow-[0px_20px_24px_-4px_rgba(16,24,40,0.08),0px_8px_8px_-4px_rgba(16,24,40,0.03)] outline outline-1 -outline-offset-1 outline-white/5 lg:self-stretch">
             {domain.description}
           </div>
         </div>
@@ -41,14 +69,14 @@ export default function TalentCards() {
               <div className="flex flex-col gap-5">
                 <div className="flex flex-col gap-4">
                   <div className="flex flex-col gap-2">
-                    <p className="font-display text-xl font-bold text-lime-200">
+                    <p className="font-display text-xl leading-6 font-bold text-lime-200">
                       {profile.name}
                     </p>
-                    <p className="text-xl font-medium text-white">
+                    <p className="text-xl leading-6 font-medium text-white">
                       {profile.role}
                     </p>
                     <p className="text-base font-medium text-zinc-400">
-                      {profile.education}
+                      <EducationText education={profile.education} />
                     </p>
                   </div>
                   <div className="h-px w-full bg-white/10" />

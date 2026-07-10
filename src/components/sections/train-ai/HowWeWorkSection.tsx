@@ -2,50 +2,49 @@ import Image from "next/image";
 import Container from "@/components/Container";
 import Eyebrow from "@/components/Eyebrow";
 
-const howSteps = [
+const steps = [
   {
     icon: "/shape-1.svg",
-    title: "Search the network",
-    description: "Start with role, stack, AI capability, or delivery need.",
+    title: "Scope your task",
+    description:
+      "Share your goals, domains, quality requirements, and expected scale. We help scope the right contributors, evaluation approach, and delivery model.",
   },
   {
     icon: "/shape-2.svg",
-    title: "Shortlist and interview fast",
+    title: "Deploy specialists",
     description:
-      "Review relevant profiles and move quickly into conversations.",
+      "Access vetted contributors, evaluators, and domain experts matched to your needs, ready to work in your existing tools and workflows.",
   },
   {
     icon: "/shape-3.svg",
-    title: "Add execution capacity",
+    title: "Scale as your model evolves",
     description:
-      "Bring in individual engineers, flexible teams, or evaluation support to ship faster.",
+      "Expand capacity as needs grow. Add specialists, increase throughput, and maintain quality through ongoing management, QA, and operational support.",
   },
 ];
 
-export default function HowItWorksSection() {
+export default function HowWeWorkSection() {
   return (
     <section className="overflow-hidden py-28">
       <Container className="relative flex gap-6">
-        <div
-          className="pointer-events-none absolute bottom-[-12px] left-[-140px] h-[221px] w-[404.016px]"
-          aria-hidden
-        >
+        <div className="pointer-events-none absolute bottom-3 left-[-140px] h-[221px] w-[404.016px]" aria-hidden>
           <Image src="/waves.svg" alt="" fill className="object-contain" />
         </div>
         <div className="flex w-[628px] flex-col gap-4">
-          <Eyebrow className="tracking-[1.5px]">How it works</Eyebrow>
+          <Eyebrow className="tracking-[1.5px]">How we work with AI labs</Eyebrow>
           <h2 className="font-display text-5xl leading-[56px] font-bold">
-            <span className="text-white">From need to execution.</span>
-            <br />
-            <span className="text-lime-200">In three simple steps.</span>
+            <span className="text-white">From task </span>
+            <span className="text-lime-200">
+              to <br /> trained system
+            </span>
           </h2>
-          <p className="text-base leading-6 font-medium text-[#B9B9B9]">
-            The easiest way to find, interview, and bring AI talent into your
-            team.
+          <p className="w-96 text-base font-medium leading-6 text-zinc-400">
+            A simple process designed to get the right specialists working on
+            your AI training tasks fast.
           </p>
         </div>
         <div className="flex w-[628px] flex-col gap-6">
-          {howSteps.map((step) => (
+          {steps.map((step) => (
             <div
               key={step.title}
               className="flex w-[628px] items-center gap-6 rounded-2xl bg-white/10 p-8 outline outline-1 -outline-offset-1 outline-white/5"

@@ -38,7 +38,7 @@ export default function WhyChooseSection() {
   return (
     <section className="pt-24 pb-28">
       <Container className="flex flex-col gap-16">
-        <div className="max-w-3xl">
+        <div className="w-[737px] max-w-full">
           <h2 className="font-display text-5xl font-bold leading-[56px]">
             <span className="text-white">Why teams </span>
             <span className="text-lime-200">choose Hirebolt</span>
@@ -51,7 +51,12 @@ export default function WhyChooseSection() {
         </div>
         <div className="flex flex-wrap gap-6">
           {whyChooseHirebolt.map((item, index) => (
-            <NumberedCard key={item.title} number={index + 1} {...item} />
+            <NumberedCard
+              key={item.title}
+              number={index + 1}
+              className="w-[628px]"
+              {...item}
+            />
           ))}
         </div>
       </Container>

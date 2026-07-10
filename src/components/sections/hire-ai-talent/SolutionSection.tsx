@@ -31,10 +31,10 @@ const solutionSteps = [
 
 export default function SolutionSection() {
   return (
-    <section className="py-28">
-      <Container className="flex flex-col gap-12">
+    <section className="pt-24 pb-28">
+      <Container className="flex flex-col gap-16">
         <div className="max-w-xl">
-          <Eyebrow>Solution</Eyebrow>
+          <Eyebrow className="tracking-[1.5px]">Solution</Eyebrow>
           <h2 className="mt-4 font-display text-4xl font-bold leading-tight sm:text-5xl sm:leading-[56px]">
             <span className="text-white">Build AI products faster.</span>
             <br />

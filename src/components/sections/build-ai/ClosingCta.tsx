@@ -14,6 +14,8 @@ export default function ClosingCta() {
           buttonHref="/contact"
           secondaryLabel="Talk to an expert"
           secondaryHref="/contact"
+          showDecoration
+          decorationDesktopClassName="right-[-44px] bottom-[-152px]"
         />
       </Container>
     </section>
