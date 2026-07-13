@@ -154,12 +154,12 @@ export default function HireAISection() {
               ))}
             </div>
           </div>
-          <div className="-mr-6 flex snap-x snap-mandatory items-start gap-4 overflow-x-auto sm:hidden [&::-webkit-scrollbar]:hidden">
+          <div className="-mr-6 flex snap-x snap-mandatory gap-4 overflow-x-auto sm:hidden [&::-webkit-scrollbar]:hidden">
             {hireFeaturesMobile.map((feature) => (
               <IconFeatureCard
                 key={feature.title}
                 layout="row"
-                className="!w-[312px] !shrink-0 !grow-0 !basis-auto snap-start"
+                className="!w-[85vw] !shrink-0 !grow-0 !basis-auto snap-start"
                 {...feature}
               />
             ))}

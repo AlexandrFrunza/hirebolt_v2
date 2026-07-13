@@ -31,17 +31,27 @@ const solutionSteps = [
 
 export default function SolutionSection() {
   return (
-    <section className="pt-24 pb-28">
+    <section className="py-12 sm:pt-24 sm:pb-28">
       <Container className="flex flex-col gap-16">
         <div className="max-w-xl">
           <Eyebrow className="tracking-[1.5px]">Solution</Eyebrow>
-          <h2 className="mt-4 font-display text-4xl font-bold leading-tight sm:text-5xl sm:leading-[56px]">
+          <h2 className="mt-4 font-display text-3xl leading-9 font-bold sm:text-5xl sm:leading-[56px]">
             <span className="text-white">Build AI products faster.</span>
             <br />
             <span className="text-lime-200">Access talent instantly.</span>
           </h2>
         </div>
-        <div className="flex flex-wrap gap-6">
+        <div className="-mr-6 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 sm:hidden [&::-webkit-scrollbar]:hidden">
+          {solutionSteps.map((step, index) => (
+            <SolutionStepCard
+              key={step.title}
+              number={index + 1}
+              className="!min-w-0 !w-[85vw] !flex-none shrink-0 snap-start"
+              {...step}
+            />
+          ))}
+        </div>
+        <div className="hidden sm:grid sm:grid-cols-4 sm:gap-6">
           {solutionSteps.map((step, index) => (
             <SolutionStepCard key={step.title} number={index + 1} {...step} />
           ))}

@@ -70,7 +70,7 @@ export default function TrainingDomainsSection() {
           {trainingDomains.map((domain) => (
             <DomainCard
               key={domain.category}
-              className="!h-80 !w-80 shrink-0 snap-start"
+              className="!h-auto !w-[85vw] shrink-0 snap-start"
               {...domain}
             />
           ))}

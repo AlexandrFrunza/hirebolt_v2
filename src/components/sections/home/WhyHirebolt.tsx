@@ -40,7 +40,7 @@ export default function WhyHirebolt() {
             <NumberedCard
               key={item.title}
               number={index + 1}
-              className="h-[420px] w-[312px] shrink-0 snap-start"
+              className="w-[85vw] shrink-0 snap-start"
               {...item}
             />
           ))}

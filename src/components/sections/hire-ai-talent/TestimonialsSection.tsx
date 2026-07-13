@@ -3,7 +3,7 @@ import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-28">
+    <section className="py-12 sm:py-28">
       <Container>
         <TestimonialsCarousel />
       </Container>

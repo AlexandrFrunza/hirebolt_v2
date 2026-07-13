@@ -55,7 +55,7 @@ export default function WhyChooseSection() {
             <NumberedCard
               key={item.title}
               number={index + 1}
-              className="w-80 shrink-0 snap-start"
+              className="w-[85vw] shrink-0 snap-start"
               {...item}
             />
           ))}

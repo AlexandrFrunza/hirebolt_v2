@@ -78,13 +78,13 @@ export default function Hero() {
             <CheckPill className="absolute top-0 left-0">
               {heroChecklist[0]}
             </CheckPill>
-            <CheckPill className="absolute top-[60px] left-[46px]">
+            <CheckPill className="absolute top-[60px] right-0">
               {heroChecklist[1]}
             </CheckPill>
             <CheckPill className="absolute top-[120px] left-0">
               {heroChecklist[2]}
             </CheckPill>
-            <CheckPill className="absolute top-[180px] left-[38px]">
+            <CheckPill className="absolute top-[180px] right-0">
               {heroChecklist[3]}
             </CheckPill>
           </div>

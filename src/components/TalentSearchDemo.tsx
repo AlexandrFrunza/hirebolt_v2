@@ -22,9 +22,9 @@ export default function TalentSearchDemo() {
   const scene = demoScenes[sceneIndex];
 
   return (
-    <div className="flex w-full flex-col items-stretch gap-8 rounded-[32px] bg-white/10 p-8 outline outline-1 -outline-offset-1 outline-white/5 lg:flex-row lg:items-stretch lg:justify-center">
+    <div className="flex w-full flex-col items-stretch gap-8 rounded-[32px] bg-white/10 p-6 outline outline-1 -outline-offset-1 outline-white/5 sm:p-8 lg:flex-row lg:items-stretch lg:justify-center">
       <div className="flex w-full max-w-[408px] flex-col justify-between gap-4">
-        <h2 className="text-[32px] leading-9 font-medium text-white">
+        <h2 className="text-2xl leading-8 font-medium text-white sm:text-[32px] sm:leading-9">
           Explore AI Talent
           <br />
           Instantly
@@ -60,11 +60,11 @@ export default function TalentSearchDemo() {
         </div>
       </div>
 
-      <div className="flex w-full max-w-[798px] flex-col gap-6 sm:flex-row">
+      <div className="flex w-full max-w-[798px] flex-col gap-4 sm:flex-row sm:gap-6">
         {scene.profiles.map((profile, i) => (
           <article
             key={i}
-            className={`flex w-[387px] shrink-0 flex-col gap-0 rounded-xl bg-white/10 p-6 outline outline-1 -outline-offset-1 outline-white/5 transition-all duration-300 ${
+            className={`flex w-full flex-col gap-0 rounded-xl bg-white/10 p-6 outline outline-1 -outline-offset-1 outline-white/5 transition-all duration-300 sm:w-[387px] sm:shrink-0 ${
               visible ? "opacity-100" : "translate-y-2 opacity-0"
             }`}
           >
@@ -94,16 +94,16 @@ export default function TalentSearchDemo() {
             <p className="mt-4 text-base leading-6 font-normal text-white">
               {profile.availability}
             </p>
-            <div className="mt-4 flex gap-2">
+            <div className="mt-4 flex flex-col gap-2 sm:flex-row">
               <a
                 href="/contact"
-                className="flex w-[165.5px] shrink-0 items-center justify-center rounded-lg bg-lime-200 px-4 py-3 text-center text-base leading-6 font-bold text-neutral-900"
+                className="flex items-center justify-center rounded-lg bg-lime-200 px-4 py-3 text-center text-base leading-6 font-bold text-neutral-900 sm:w-[165.5px] sm:flex-none sm:shrink-0"
               >
                 View profile
               </a>
               <a
                 href="/contact"
-                className="flex w-[165.5px] shrink-0 items-center justify-center rounded-lg bg-white px-4 py-3 text-center text-base leading-6 font-bold text-black"
+                className="flex items-center justify-center rounded-lg bg-white px-4 py-3 text-center text-base leading-6 font-bold text-black sm:w-[165.5px] sm:flex-none sm:shrink-0"
               >
                 Shortlist
               </a>

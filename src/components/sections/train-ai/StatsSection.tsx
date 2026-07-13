@@ -26,7 +26,7 @@ export default function StatsSection() {
           {stats.map((stat) => (
             <div
               key={stat.title}
-              className="w-80 shrink-0 snap-start rounded-2xl bg-slate-800 p-6 outline outline-1 -outline-offset-1 outline-white/5"
+              className="w-[85vw] shrink-0 snap-start rounded-2xl bg-slate-800 p-6 outline outline-1 -outline-offset-1 outline-white/5"
             >
               <p className="font-display text-xl leading-6 font-bold text-white">
                 {stat.title}

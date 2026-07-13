@@ -17,16 +17,16 @@ export default function ComplianceMobileTabs({
   ];
 
   return (
-    <div className="flex w-80 flex-col items-start gap-6 overflow-hidden rounded-2xl bg-white/10 px-6 pt-2 pb-6 outline outline-1 -outline-offset-1 outline-white/5 sm:hidden">
+    <div className="flex w-full flex-col items-start gap-6 overflow-hidden rounded-2xl bg-white/10 px-6 pt-2 pb-6 outline outline-1 -outline-offset-1 outline-white/5 sm:hidden">
       <div className="flex w-full flex-col items-center gap-8">
         <div className="flex w-full flex-col items-center gap-8">
-          <div className="flex items-start gap-2">
+          <div className="-mx-4 flex w-[calc(100%+2rem)] items-start gap-2">
             {tabs.map((tab, index) => (
               <button
                 key={tab.label}
                 type="button"
                 onClick={() => setActiveIndex(index)}
-                className={`flex w-36 flex-col items-center justify-center gap-6 overflow-hidden rounded-lg px-6 py-4 text-base leading-6 font-semibold outline outline-1 -outline-offset-1 ${
+                className={`flex flex-1 flex-col items-center justify-center gap-6 overflow-hidden rounded-lg px-6 py-4 text-base leading-6 font-semibold outline outline-1 -outline-offset-1 ${
                   index === activeIndex
                     ? "bg-lime-200 text-slate-800 outline-lime-200"
                     : "bg-white/10 text-white outline-white/5"

@@ -25,7 +25,7 @@ export default function StatsSection() {
           {stats.map((stat) => (
             <div
               key={stat.title}
-              className="flex w-80 shrink-0 snap-start flex-col gap-3 rounded-2xl bg-slate-800 p-6 outline outline-1 -outline-offset-1 outline-white/5"
+              className="flex w-[85vw] shrink-0 snap-start flex-col gap-3 rounded-2xl bg-slate-800 p-6 outline outline-1 -outline-offset-1 outline-white/5"
             >
               <p className="font-display text-xl leading-7 font-bold text-white">
                 {stat.title}

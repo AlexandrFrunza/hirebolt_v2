@@ -67,7 +67,7 @@ export default function TalentCards() {
           {domain.profiles.map((profile) => (
             <div
               key={profile.name}
-              className="w-66 shrink-0 snap-start rounded-xl bg-white/10 p-6 outline outline-1 -outline-offset-1 outline-white/5"
+              className="w-[calc((100vw-96px)*0.85)] shrink-0 snap-start rounded-xl bg-white/10 p-6 outline outline-1 -outline-offset-1 outline-white/5"
             >
               <div className="flex flex-col gap-5">
                 <div className="flex flex-col gap-4">

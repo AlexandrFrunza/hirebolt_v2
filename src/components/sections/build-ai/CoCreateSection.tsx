@@ -51,7 +51,7 @@ export default function CoCreateSection() {
           {processSteps.map((step) => (
             <div
               key={step.title}
-              className="flex h-80 w-80 shrink-0 snap-start flex-col justify-center gap-4 rounded-2xl bg-white/10 p-6 outline outline-1 -outline-offset-1 outline-white/5"
+              className="flex w-[85vw] shrink-0 snap-start flex-col justify-center gap-4 rounded-2xl bg-white/10 p-6 outline outline-1 -outline-offset-1 outline-white/5"
             >
               <div className="relative h-24 w-24 shrink-0">
                 <Image src={step.icon} alt="" fill className="object-contain" />

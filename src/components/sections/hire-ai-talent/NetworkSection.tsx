@@ -1,5 +1,5 @@
 import Container from "@/components/Container";
-import NetworkStatPill from "@/components/NetworkStatPill";
+import NetworkStatsRow from "@/components/NetworkStatsRow";
 
 const networkStats = [
   { icon: "/hire-ai-talent/icon-globe.svg", label: "40 regions / timezones" },
@@ -32,11 +32,7 @@ export default function NetworkSection() {
               and execution.
             </p>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-3">
-            {networkStats.map((stat) => (
-              <NetworkStatPill key={stat.label} {...stat} />
-            ))}
-          </div>
+          <NetworkStatsRow stats={networkStats} />
         </div>
       </Container>
     </section>

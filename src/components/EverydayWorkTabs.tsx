@@ -122,7 +122,7 @@ export default function EverydayWorkTabs() {
         <div
           ref={trackRef}
           onScroll={handleScroll}
-          className="-mr-6 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 sm:hidden [&::-webkit-scrollbar]:hidden"
+          className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 sm:hidden [&::-webkit-scrollbar]:hidden"
         >
           {everydayWorkTabs.map((tab) => (
             <div

@@ -109,7 +109,7 @@ export default function BuildAISection() {
               <IconFeatureCard
                 key={feature.title}
                 layout="col"
-                className="!w-[312px] !shrink-0 !grow-0 !basis-auto snap-start"
+                className="!w-[85vw] !shrink-0 !grow-0 !basis-auto snap-start"
                 {...feature}
               />
             ))}

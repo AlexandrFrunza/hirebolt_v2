@@ -28,7 +28,7 @@ export default function ProductsMobileCarousel({
       {products.map((product, index) => (
         <ProductCard
           key={product.category}
-          className={`!w-80 !flex-none shrink-0 snap-start ${
+          className={`!w-[85vw] !flex-none shrink-0 snap-start ${
             index === activeIndex ? "!outline-lime-200" : ""
           }`}
           {...product}

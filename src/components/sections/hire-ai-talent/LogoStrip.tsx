@@ -17,9 +17,21 @@ const partnerLogos = [
 
 export default function LogoStrip() {
   return (
-    <section className="py-28">
+    <section className="py-12 sm:py-28">
       <Container>
-        <div className="flex w-full flex-wrap items-center justify-between gap-6">
+        <div className="flex flex-col items-center gap-8 sm:hidden">
+          {partnerLogos.map((logo) => (
+            <div key={logo.alt} className="relative h-16 w-[179px]">
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                fill
+                className="object-contain"
+              />
+            </div>
+          ))}
+        </div>
+        <div className="hidden w-full flex-wrap items-center justify-between gap-6 sm:flex">
           {partnerLogos.map((logo) => (
             <div key={logo.alt} className="relative h-16 w-[179px]">
               <Image
