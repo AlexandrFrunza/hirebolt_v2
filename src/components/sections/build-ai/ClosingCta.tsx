@@ -11,9 +11,9 @@ export default function ClosingCta() {
           }
           description="Partner with Hirebolt to scale your development capacity, build resilient AI integrations, and ship secure AI products."
           buttonLabel="Start a project"
-          buttonHref="/contact"
+          buttonHref="https://www.index.dev/hire"
           secondaryLabel="Talk to an expert"
-          secondaryHref="/contact"
+          secondaryHref="https://www.index.dev/hire"
           showDecoration
           decorationDesktopClassName="right-[-44px] bottom-[-152px]"
         />

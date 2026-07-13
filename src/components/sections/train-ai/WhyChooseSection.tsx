@@ -36,11 +36,12 @@ const whyChooseHirebolt = [
 
 export default function WhyChooseSection() {
   return (
-    <section className="pt-24 pb-28">
+    <section className="py-12 sm:pt-24 sm:pb-28">
       <Container className="flex flex-col gap-16">
         <div className="w-[737px] max-w-full">
-          <h2 className="font-display text-5xl font-bold leading-[56px]">
+          <h2 className="font-display text-3xl leading-9 font-bold sm:text-5xl sm:leading-[56px]">
             <span className="text-white">Why teams </span>
+            <br className="sm:hidden" />
             <span className="text-lime-200">choose Hirebolt</span>
           </h2>
           <p className="mt-4 text-base font-medium text-zinc-400">
@@ -49,7 +50,17 @@ export default function WhyChooseSection() {
             sourcing to quality assurance.
           </p>
         </div>
-        <div className="flex flex-wrap gap-6">
+        <div className="-mr-6 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 sm:hidden [&::-webkit-scrollbar]:hidden">
+          {whyChooseHirebolt.map((item, index) => (
+            <NumberedCard
+              key={item.title}
+              number={index + 1}
+              className="w-80 shrink-0 snap-start"
+              {...item}
+            />
+          ))}
+        </div>
+        <div className="hidden flex-wrap gap-6 sm:flex">
           {whyChooseHirebolt.map((item, index) => (
             <NumberedCard
               key={item.title}

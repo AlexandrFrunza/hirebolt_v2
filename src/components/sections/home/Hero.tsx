@@ -59,10 +59,15 @@ export default function Hero() {
               network of vetted contributors, engineers, and domain experts.
             </p>
             <div className="flex w-full flex-col items-center gap-8 sm:w-auto sm:flex-row sm:flex-wrap sm:justify-center">
-              <Button href="/hire-ai-talent" className="w-full sm:w-auto">
+              <Button
+                href="https://www.index.dev/hire"
+                className="w-full sm:w-auto"
+              >
                 Explore the network
               </Button>
-              <TextLink href="/contact">Talk to an expert</TextLink>
+              <TextLink href="https://www.index.dev/hire">
+                Talk to an expert
+              </TextLink>
             </div>
           </div>
         </div>

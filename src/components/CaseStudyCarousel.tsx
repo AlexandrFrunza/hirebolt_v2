@@ -29,20 +29,20 @@ export default function CaseStudyCarousel() {
       <div
         ref={trackRef}
         onScroll={handleScroll}
-        className="flex w-full min-w-0 snap-x snap-mandatory gap-6 overflow-x-auto pb-2"
+        className="flex w-full min-w-0 snap-x snap-mandatory gap-6 overflow-x-auto pb-2 [&::-webkit-scrollbar]:hidden"
       >
         {caseStudies.map((study) => (
           <CaseStudyCard key={study.title} {...study} />
         ))}
       </div>
-      <div className="flex w-full max-w-[1280px] justify-center gap-2">
+      <div className="flex w-full max-w-[1280px] justify-center gap-1.5 sm:gap-2">
         {caseStudies.map((_, index) => (
           <button
             key={index}
             type="button"
             aria-label={`Show case study ${index + 1}`}
             onClick={() => scrollToIndex(index)}
-            className={`h-3 w-3 rounded-full transition-colors ${
+            className={`h-2 w-2 rounded-full transition-colors sm:h-3 sm:w-3 ${
               activeIndex === index ? "bg-lime-200" : "bg-white/20"
             }`}
           />

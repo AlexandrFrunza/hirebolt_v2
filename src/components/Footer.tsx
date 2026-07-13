@@ -74,7 +74,10 @@ export default function Footer() {
               <p className="text-xs font-medium uppercase tracking-widest text-lime-200">
                 Social
               </p>
-              <Link href="https://linkedin.com" aria-label="LinkedIn">
+              <Link
+                href="https://www.linkedin.com/company/hireboltt"
+                aria-label="LinkedIn"
+              >
                 <Image
                   src="/LinkedIn.svg"
                   alt=""

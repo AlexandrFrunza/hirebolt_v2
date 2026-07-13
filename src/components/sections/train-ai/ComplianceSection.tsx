@@ -1,5 +1,6 @@
 import Container from "@/components/Container";
 import ComplianceCard from "@/components/ComplianceCard";
+import ComplianceMobileTabs from "@/components/ComplianceMobileTabs";
 
 const complianceItems = [
   {
@@ -47,15 +48,19 @@ const securityItems = [
 
 export default function ComplianceSection() {
   return (
-    <section className="py-28">
+    <section className="py-12 sm:py-28">
       <Container className="flex flex-col gap-16">
-        <p className="w-[737px] max-w-full text-[32px] leading-9 font-medium">
+        <p className="w-[737px] max-w-full text-2xl leading-8 font-medium sm:text-[32px] sm:leading-9">
           <span className="text-white">AI training data is sensitive. </span>
           <span className="text-lime-200">
             We treat it with enterprise-grade security and full compliance.
           </span>
         </p>
-        <div className="flex flex-wrap gap-6">
+        <ComplianceMobileTabs
+          compliance={complianceItems}
+          security={securityItems}
+        />
+        <div className="hidden flex-wrap gap-6 sm:flex">
           <ComplianceCard title="Compliance" items={complianceItems} />
           <ComplianceCard title="Security practices" items={securityItems} />
         </div>

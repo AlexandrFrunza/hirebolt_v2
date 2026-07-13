@@ -40,7 +40,7 @@ export default function Header() {
           })}
         </nav>
         <Link
-          href="/careers"
+          href="https://www.index.dev/hire"
           className="hidden items-center gap-2 text-base font-medium text-white transition-colors hover:text-lime-200 md:flex"
         >
           Looking for a job?
@@ -59,39 +59,49 @@ export default function Header() {
       </Container>
 
       {mobileOpen && (
-        <div className="flex flex-col items-center gap-16 py-12 md:hidden">
-          <div className="flex w-full flex-col items-start gap-4">
-            {navLinks.map((link) => {
-              const isActive = pathname === link.href;
-              return (
-                <div
-                  key={link.href}
-                  className="flex w-full flex-col items-center justify-center gap-2"
-                >
-                  <Link
-                    href={link.href}
-                    onClick={() => setMobileOpen(false)}
-                    className={`border-b-2 p-1 text-base transition-colors ${
-                      isActive
-                        ? "border-lime-200 font-bold text-white"
-                        : "border-transparent font-medium text-zinc-300"
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                </div>
-              );
-            })}
-          </div>
-          <Link
-            href="/careers"
+        <>
+          <div
+            className="fixed inset-0 top-16 z-40 md:hidden"
             onClick={() => setMobileOpen(false)}
-            className="flex items-center gap-2 text-base font-medium text-white"
+            aria-hidden
+          />
+          <div
+            className="absolute inset-x-0 top-full z-50 flex flex-col items-center gap-16 bg-neutral-900 py-12 md:hidden"
+            onClick={() => setMobileOpen(false)}
           >
-            Looking for a job?
-            <ArrowRight className="h-5 w-5 text-lime-200" />
-          </Link>
-        </div>
+            <div className="flex w-full flex-col items-start gap-4">
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href;
+                return (
+                  <div
+                    key={link.href}
+                    className="flex w-full flex-col items-center justify-center gap-2"
+                  >
+                    <Link
+                      href={link.href}
+                      onClick={() => setMobileOpen(false)}
+                      className={`border-b-2 p-1 text-base transition-colors ${
+                        isActive
+                          ? "border-lime-200 font-bold text-white"
+                          : "border-transparent font-medium text-zinc-300"
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  </div>
+                );
+              })}
+            </div>
+            <Link
+              href="https://www.index.dev/hire"
+              onClick={() => setMobileOpen(false)}
+              className="flex items-center gap-2 text-base font-medium text-white"
+            >
+              Looking for a job?
+              <ArrowRight className="h-5 w-5 text-lime-200" />
+            </Link>
+          </div>
+        </>
       )}
     </header>
   );

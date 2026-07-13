@@ -55,12 +55,54 @@ export default function TalentCards() {
               </button>
             ))}
           </div>
-          <div className="flex w-[580px] flex-col items-center justify-center gap-2.5 rounded-lg bg-white/10 p-6 text-center text-base leading-6 font-medium text-white shadow-[0px_20px_24px_-4px_rgba(16,24,40,0.08),0px_8px_8px_-4px_rgba(16,24,40,0.03)] outline outline-1 -outline-offset-1 outline-white/5 lg:self-stretch">
+          <div className="hidden w-[580px] flex-col items-center justify-center gap-2.5 rounded-lg bg-white/10 p-6 text-center text-base leading-6 font-medium text-white shadow-[0px_20px_24px_-4px_rgba(16,24,40,0.08),0px_8px_8px_-4px_rgba(16,24,40,0.03)] outline outline-1 -outline-offset-1 outline-white/5 sm:flex lg:self-stretch">
             {domain.description}
           </div>
+          <p className="text-center text-base leading-6 font-medium text-white sm:hidden">
+            {domain.description}
+          </p>
         </div>
 
-        <div className="flex flex-col gap-6 lg:flex-row">
+        <div className="-mr-6 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 sm:hidden [&::-webkit-scrollbar]:hidden">
+          {domain.profiles.map((profile) => (
+            <div
+              key={profile.name}
+              className="w-66 shrink-0 snap-start rounded-xl bg-white/10 p-6 outline outline-1 -outline-offset-1 outline-white/5"
+            >
+              <div className="flex flex-col gap-5">
+                <div className="flex flex-col gap-4">
+                  <div className="flex flex-col gap-2">
+                    <p className="font-display text-xl leading-6 font-bold text-lime-200">
+                      {profile.name}
+                    </p>
+                    <p className="text-base leading-5 font-medium text-white">
+                      {profile.role}
+                    </p>
+                    <p className="text-sm leading-5 font-normal text-zinc-300">
+                      <EducationText education={profile.education} />
+                    </p>
+                  </div>
+                  <div className="h-px w-full bg-white/10" />
+                  <div className="flex flex-wrap gap-1">
+                    {profile.skills.map((skill) => (
+                      <span
+                        key={skill}
+                        className="rounded-sm px-2 py-1 text-xs leading-4 font-normal text-white outline outline-1 -outline-offset-1 outline-white/50"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <p className="text-xs leading-5 font-medium text-zinc-300">
+                  {profile.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="hidden flex-col gap-6 sm:flex lg:flex-row">
           {domain.profiles.map((profile) => (
             <div
               key={profile.name}

@@ -9,7 +9,7 @@ export default function CheckPill({
 }) {
   return (
     <span
-      className={`inline-flex items-center gap-2 rounded-lg bg-white/10 px-4 py-3 text-base leading-4 font-medium text-white outline outline-1 -outline-offset-1 outline-white/5 ${className}`}
+      className={`inline-flex items-center gap-2 rounded-lg bg-white/10 px-4 py-3 text-base leading-4 font-medium whitespace-nowrap text-white outline outline-1 -outline-offset-1 outline-white/5 ${className}`}
     >
       <Image
         src="/train-ai/check-24.svg"

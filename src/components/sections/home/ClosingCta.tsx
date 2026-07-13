@@ -18,8 +18,10 @@ export default function ClosingCta() {
           }
           description="Partner with Hirebolt to accelerate frontier research, scale your post-training datasets, or bring in specialized AI-native engineering talent."
           buttonLabel="Get started"
+          buttonHref="https://www.index.dev/hire"
           mobileButtonLabel="Start a project"
           mobileSecondaryLabel="Talk to an expert"
+          mobileSecondaryHref="https://www.index.dev/hire"
           showDecoration
         />
       </Container>

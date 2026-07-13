@@ -18,30 +18,69 @@ export default function CaseStudyCard({
   outcomes,
 }: CaseStudy) {
   return (
-    <div className="flex w-[min(954px,90vw)] shrink-0 snap-start flex-col gap-8 rounded-2xl p-6 outline outline-2 -outline-offset-2 outline-lime-200/20 sm:p-8">
-      <p className="text-2xl font-medium text-white">{title}</p>
+    <div className="flex w-full shrink-0 snap-start flex-col gap-8 rounded-2xl bg-neutral-900 p-6 outline outline-2 -outline-offset-2 outline-lime-200/20 sm:w-[min(954px,90vw)] sm:p-8">
+      <p className="text-base leading-6 font-medium text-white sm:text-2xl">
+        {title}
+      </p>
 
-      <div className="flex flex-col gap-4 rounded-lg bg-white/10 px-6 py-4 outline outline-1 -outline-offset-1 outline-white/5">
-        <div className="flex flex-col gap-4 sm:flex-row sm:gap-8">
-          <p className="flex-1 text-base leading-6 font-medium">
-            <span className="text-lime-200">Industry: </span>
-            <span className="tracking-[-0.48px] text-[#D9D9D9]">{industry}</span>
+      <div className="flex flex-col gap-4 rounded-lg bg-white/10 p-4 outline outline-1 -outline-offset-1 outline-white/5 sm:px-6 sm:py-4">
+        <div className="flex flex-col gap-4 sm:hidden">
+          <p className="flex flex-col gap-1 text-xs leading-4 font-medium">
+            <span className="text-lime-200">Industry:</span>
+            <span className="tracking-[-0.48px] text-[#D9D9D9]">
+              {industry}
+            </span>
           </p>
-          <p className="flex-1 text-base leading-6 font-medium">
-            <span className="text-lime-200">Team size: </span>
-            <span className="tracking-[-0.48px] text-[#D9D9D9]">{teamSize}</span>
+          <div className="h-px w-full bg-white/10" />
+          <p className="flex flex-col gap-1 text-xs leading-4 font-medium">
+            <span className="text-lime-200">Project duration:</span>
+            <span className="tracking-[-0.48px] text-[#D9D9D9]">
+              {duration}
+            </span>
           </p>
-        </div>
-        <div className="h-px w-full bg-white/10" />
-        <div className="flex flex-col gap-4 sm:flex-row sm:gap-8">
-          <p className="flex-1 text-base leading-6 font-medium">
-            <span className="text-lime-200">Project duration: </span>
-            <span className="tracking-[-0.48px] text-[#D9D9D9]">{duration}</span>
+          <div className="h-px w-full bg-white/10" />
+          <p className="flex flex-col gap-1 text-xs leading-4 font-medium">
+            <span className="text-lime-200">Team size:</span>
+            <span className="tracking-[-0.48px] text-[#D9D9D9]">
+              {teamSize}
+            </span>
           </p>
-          <p className="flex-1 text-base leading-6 font-medium">
-            <span className="text-lime-200">Focus: </span>
+          <div className="h-px w-full bg-white/10" />
+          <p className="flex flex-col gap-1 text-xs leading-4 font-medium">
+            <span className="text-lime-200">Focus:</span>
             <span className="tracking-[-0.48px] text-[#D9D9D9]">{focus}</span>
           </p>
+        </div>
+        <div className="hidden sm:flex sm:flex-col sm:gap-4">
+          <div className="flex flex-col gap-4 sm:flex-row sm:gap-8">
+            <p className="flex-1 text-base leading-6 font-medium">
+              <span className="text-lime-200">Industry: </span>
+              <span className="tracking-[-0.48px] text-[#D9D9D9]">
+                {industry}
+              </span>
+            </p>
+            <p className="flex-1 text-base leading-6 font-medium">
+              <span className="text-lime-200">Team size: </span>
+              <span className="tracking-[-0.48px] text-[#D9D9D9]">
+                {teamSize}
+              </span>
+            </p>
+          </div>
+          <div className="h-px w-full bg-white/10" />
+          <div className="flex flex-col gap-4 sm:flex-row sm:gap-8">
+            <p className="flex-1 text-base leading-6 font-medium">
+              <span className="text-lime-200">Project duration: </span>
+              <span className="tracking-[-0.48px] text-[#D9D9D9]">
+                {duration}
+              </span>
+            </p>
+            <p className="flex-1 text-base leading-6 font-medium">
+              <span className="text-lime-200">Focus: </span>
+              <span className="tracking-[-0.48px] text-[#D9D9D9]">
+                {focus}
+              </span>
+            </p>
+          </div>
         </div>
       </div>
 

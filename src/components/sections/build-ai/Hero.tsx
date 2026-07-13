@@ -47,7 +47,9 @@ export default function Hero() {
               </p>
               <div className="flex flex-wrap items-center justify-center gap-8">
                 <Button href="/contact">Launch a project</Button>
-                <TextLink href="/contact">Talk to an expert</TextLink>
+                <TextLink href="https://www.index.dev/hire">
+                  Talk to an expert
+                </TextLink>
               </div>
             </div>
           </div>

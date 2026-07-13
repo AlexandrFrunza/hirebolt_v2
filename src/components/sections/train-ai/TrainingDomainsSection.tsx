@@ -54,10 +54,10 @@ const trainingDomains = [
 
 export default function TrainingDomainsSection() {
   return (
-    <section className="py-28">
-      <Container className="flex flex-col gap-16">
+    <section className="py-12 sm:py-28">
+      <Container className="flex flex-col gap-12 sm:gap-16">
         <div className="flex flex-col gap-4">
-          <h2 className="font-display text-5xl font-bold leading-[56px]">
+          <h2 className="font-display text-[32px] leading-9 font-bold sm:text-5xl sm:leading-[56px]">
             <span className="text-white">Train </span>
             <span className="text-lime-200">frontier models</span>
           </h2>
@@ -66,7 +66,16 @@ export default function TrainingDomainsSection() {
             advance model performance.
           </p>
         </div>
-        <div className="flex flex-wrap gap-6">
+        <div className="-mr-6 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 sm:hidden [&::-webkit-scrollbar]:hidden">
+          {trainingDomains.map((domain) => (
+            <DomainCard
+              key={domain.category}
+              className="!h-80 !w-80 shrink-0 snap-start"
+              {...domain}
+            />
+          ))}
+        </div>
+        <div className="hidden flex-wrap gap-6 sm:flex">
           {trainingDomains.map((domain) => (
             <DomainCard key={domain.category} {...domain} />
           ))}
