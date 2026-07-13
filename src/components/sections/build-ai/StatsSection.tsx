@@ -19,9 +19,24 @@ const stats = [
 
 export default function StatsSection() {
   return (
-    <section className="py-28">
+    <section className="py-12 sm:py-28">
       <Container>
-        <div className="flex flex-wrap items-start gap-6">
+        <div className="-mr-6 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 sm:hidden [&::-webkit-scrollbar]:hidden">
+          {stats.map((stat) => (
+            <div
+              key={stat.title}
+              className="flex w-80 shrink-0 snap-start flex-col gap-3 rounded-2xl bg-slate-800 p-6 outline outline-1 -outline-offset-1 outline-white/5"
+            >
+              <p className="font-display text-xl leading-7 font-bold text-white">
+                {stat.title}
+              </p>
+              <p className="text-base font-medium text-slate-300">
+                {stat.description}
+              </p>
+            </div>
+          ))}
+        </div>
+        <div className="hidden flex-wrap items-start gap-6 sm:flex">
           {stats.map((stat) => (
             <div
               key={stat.title}

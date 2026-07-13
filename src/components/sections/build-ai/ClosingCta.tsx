@@ -3,7 +3,7 @@ import CtaPanel from "@/components/CtaPanel";
 
 export default function ClosingCta() {
   return (
-    <section className="py-28">
+    <section className="pt-12 pb-16 sm:pt-28 sm:pb-28">
       <Container>
         <CtaPanel
           title={
@@ -14,6 +14,9 @@ export default function ClosingCta() {
           buttonHref="https://www.index.dev/hire"
           secondaryLabel="Talk to an expert"
           secondaryHref="https://www.index.dev/hire"
+          mobileButtonLabel="Start a project"
+          mobileSecondaryLabel="Talk to an expert"
+          mobileSecondaryHref="https://www.index.dev/hire"
           showDecoration
           decorationDesktopClassName="right-[-44px] bottom-[-152px]"
         />

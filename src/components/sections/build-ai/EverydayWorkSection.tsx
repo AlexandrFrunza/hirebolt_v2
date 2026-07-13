@@ -3,10 +3,10 @@ import EverydayWorkTabs from "@/components/EverydayWorkTabs";
 
 export default function EverydayWorkSection() {
   return (
-    <section className="py-28">
+    <section className="pt-16 pb-12 sm:py-28">
       <Container className="flex flex-col gap-16">
         <div className="flex flex-col gap-4">
-          <h2 className="font-display text-5xl font-bold leading-[56px]">
+          <h2 className="font-display text-3xl leading-9 font-bold sm:text-5xl sm:leading-[56px]">
             <span className="text-white">Bring AI </span>
             <span className="text-lime-200">into everyday work</span>
           </h2>

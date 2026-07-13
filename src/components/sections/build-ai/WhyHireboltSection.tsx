@@ -27,19 +27,32 @@ const whyHirebolt = [
 
 export default function WhyHireboltSection() {
   return (
-    <section className="pt-24 pb-28">
+    <section className="py-12 sm:pt-24 sm:pb-28">
       <Container className="flex flex-col gap-12">
         <div className="max-w-2xl">
           <Eyebrow>Why Hirebolt</Eyebrow>
-          <h2 className="mt-4 font-display text-5xl font-bold leading-[56px]">
+          <h2 className="mt-4 font-display text-3xl leading-9 font-bold sm:text-5xl sm:leading-[56px]">
             <span className="text-white">
               Engineering-led.
               <br />
             </span>
             <span className="text-lime-200">Outcome-focused.</span>
           </h2>
+          <p className="mt-4 text-base font-medium leading-6 text-zinc-400 sm:hidden">
+            Simple steps to design, build, and improve AI systems.
+          </p>
         </div>
-        <div className="grid grid-cols-2 gap-6">
+        <div className="-mr-6 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 sm:hidden [&::-webkit-scrollbar]:hidden">
+          {whyHirebolt.map((item, index) => (
+            <NumberedCard
+              key={item.title}
+              number={index + 1}
+              className="w-80 shrink-0 snap-start"
+              {...item}
+            />
+          ))}
+        </div>
+        <div className="hidden grid-cols-2 gap-6 sm:grid">
           {whyHirebolt.map((item, index) => (
             <NumberedCard key={item.title} number={index + 1} {...item} />
           ))}

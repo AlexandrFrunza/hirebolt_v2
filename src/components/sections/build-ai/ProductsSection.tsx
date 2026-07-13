@@ -1,6 +1,7 @@
 import Container from "@/components/Container";
 import Button from "@/components/Button";
 import ProductCard from "@/components/ProductCard";
+import ProductsMobileCarousel from "@/components/ProductsMobileCarousel";
 
 const products = [
   {
@@ -37,22 +38,26 @@ const products = [
 
 export default function ProductsSection() {
   return (
-    <section className="py-28">
+    <section className="py-12 sm:py-28">
       <Container className="flex flex-col gap-16">
-        <h2 className="max-w-3xl font-display text-5xl font-bold leading-[56px]">
-          <span className="text-white">AI products </span>
+        <h2 className="max-w-3xl font-display text-3xl leading-9 font-bold sm:text-5xl sm:leading-[56px]">
+          <span className="text-white">AI products</span>
+          <br className="sm:hidden" />{" "}
           <span className="text-lime-200">we help build</span>
         </h2>
-        <div className="flex flex-wrap gap-6">
+        <ProductsMobileCarousel products={products} />
+        <div className="hidden flex-wrap gap-6 sm:flex">
           {products.map((product) => (
             <ProductCard key={product.category} {...product} />
           ))}
         </div>
-        <div className="flex w-[628px] max-w-full flex-col items-start gap-6">
+        <div className="hidden w-[628px] max-w-full flex-col items-start gap-6 sm:flex">
           <p className="text-base leading-6 font-medium text-white">
             Don&apos;t see your specific use case?
           </p>
-          <Button href="/contact">Request a custom build</Button>
+          <Button href="/contact" className="w-full sm:w-auto">
+            Request a custom build
+          </Button>
         </div>
       </Container>
     </section>
