@@ -17,10 +17,35 @@ const fraunces = Fraunces({
   axes: ["opsz", "SOFT", "WONK"],
 });
 
+const title = "Hirebolt — High quality human intelligence for frontier AI";
+const description =
+  "Hirebolt helps AI companies access specialist talent, AI training workflows, and engineering capacity through a global network of vetted contributors, engineers, and domain experts.";
+
 export const metadata: Metadata = {
-  title: "Hirebolt — High quality human intelligence for frontier AI",
-  description:
-    "Hirebolt helps AI companies access specialist talent, AI training workflows, and engineering capacity through a global network of vetted contributors, engineers, and domain experts.",
+  metadataBase: new URL("https://hirebolt.com"),
+  title: {
+    default: title,
+    template: "%s | Hirebolt",
+  },
+  description,
+  alternates: { canonical: "/" },
+  openGraph: {
+    title,
+    description,
+    url: "/",
+    siteName: "Hirebolt",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -34,6 +59,19 @@ export default function RootLayout({
       className={`${spaceGrotesk.variable} ${fraunces.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-neutral-900 text-white font-sans">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Hirebolt",
+              url: "https://hirebolt.com",
+              logo: "https://hirebolt.com/hirebolt-logo.png",
+              sameAs: ["https://www.linkedin.com/company/hireboltt"],
+            }),
+          }}
+        />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
