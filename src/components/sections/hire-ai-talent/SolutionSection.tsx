@@ -51,7 +51,7 @@ export default function SolutionSection() {
             />
           ))}
         </div>
-        <div className="hidden sm:grid sm:grid-cols-4 sm:gap-6">
+        <div className="hidden sm:grid sm:grid-cols-2 sm:gap-6">
           {solutionSteps.map((step, index) => (
             <SolutionStepCard key={step.title} number={index + 1} {...step} />
           ))}

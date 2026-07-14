@@ -96,13 +96,13 @@ export default function TalentSearchDemo() {
             </p>
             <div className="mt-4 flex flex-col gap-2 sm:flex-row">
               <a
-                href="/contact"
+                href="https://www.index.dev/hire"
                 className="flex items-center justify-center rounded-lg bg-lime-200 px-4 py-3 text-center text-base leading-6 font-bold text-neutral-900 sm:w-[165.5px] sm:flex-none sm:shrink-0"
               >
                 View profile
               </a>
               <a
-                href="/contact"
+                href="https://www.index.dev/hire"
                 className="flex items-center justify-center rounded-lg bg-white px-4 py-3 text-center text-base leading-6 font-bold text-black sm:w-[165.5px] sm:flex-none sm:shrink-0"
               >
                 Shortlist

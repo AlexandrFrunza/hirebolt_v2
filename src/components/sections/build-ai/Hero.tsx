@@ -46,7 +46,10 @@ export default function Hero() {
                 drive business results.
               </p>
               <div className="flex w-full flex-col items-center gap-8 sm:w-auto sm:flex-row sm:flex-wrap sm:justify-center">
-                <Button href="/contact" className="w-full sm:w-auto">
+                <Button
+                  href="https://www.index.dev/hire"
+                  className="w-full sm:w-auto"
+                >
                   Launch a project
                 </Button>
                 <TextLink href="https://www.index.dev/hire">

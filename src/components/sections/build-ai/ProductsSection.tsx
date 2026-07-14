@@ -55,7 +55,10 @@ export default function ProductsSection() {
           <p className="text-base leading-6 font-medium text-white">
             Don&apos;t see your specific use case?
           </p>
-          <Button href="/contact" className="w-full sm:w-auto">
+          <Button
+            href="https://www.index.dev/hire"
+            className="w-full sm:w-auto"
+          >
             Request a custom build
           </Button>
         </div>

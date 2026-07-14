@@ -40,7 +40,7 @@ export default function Header() {
           })}
         </nav>
         <Link
-          href="https://www.index.dev/hire"
+          href="https://workspace.index.dev/register"
           className="hidden items-center gap-2 text-base font-medium text-white transition-colors hover:text-lime-200 md:flex"
         >
           Looking for a job?
@@ -93,7 +93,7 @@ export default function Header() {
               })}
             </div>
             <Link
-              href="https://www.index.dev/hire"
+              href="https://workspace.index.dev/register"
               onClick={() => setMobileOpen(false)}
               className="flex items-center gap-2 text-base font-medium text-white"
             >

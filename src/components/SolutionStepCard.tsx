@@ -15,8 +15,8 @@ export default function SolutionStepCard({
     <div
       className={`w-full rounded-2xl bg-slate-800 p-8 outline outline-1 -outline-offset-1 outline-white/5 ${className}`}
     >
-      <div className="flex h-full flex-col items-start gap-6">
-        <span className="font-display text-6xl font-bold leading-[52px] text-lime-200">
+      <div className="flex flex-col items-start gap-6 sm:flex-row">
+        <span className="w-[52px] shrink-0 font-display text-6xl font-bold leading-[52px] text-lime-200 sm:w-auto">
           {number}.
         </span>
         <div className="flex flex-col items-start gap-4">
