@@ -49,7 +49,7 @@ export default function Hero() {
                   href="https://www.index.dev/hire"
                   className="w-full sm:w-auto"
                 >
-                  Start Searching
+                  Hire AI Talent
                 </Button>
                 <TextLink href="https://www.index.dev/hire">
                   Talk to Us

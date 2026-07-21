@@ -6,16 +6,16 @@ import TalentCards from "@/components/TalentCards";
 
 const trustSignals = [
   {
-    text: "Talent across 60+ countries supporting 40+ languages for multilingual evaluation",
-    className: "top-0 left-[160px]",
+    text: "PhDs in Math, Physics, Chemistry, Biology, or Engineering",
+    className: "top-0 left-[281px]",
   },
   {
     text: "Grads and researchers from MIT, Stanford, Oxford, and leading institutions",
-    className: "top-[60px] right-[160px]",
+    className: "top-[60px] right-[202px]",
   },
   {
     text: "100% identity-verified, live-proctored, and technical credential-checked",
-    className: "top-[120px] left-[308px]",
+    className: "top-[120px] left-[202px]",
   },
 ];
 
