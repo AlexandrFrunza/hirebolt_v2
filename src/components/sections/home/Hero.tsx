@@ -12,7 +12,7 @@ const heroStats = [
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden py-12 sm:pt-32 sm:pb-28">
+    <section className="relative overflow-hidden py-12 sm:pt-32 sm:pb-28 md:pt-[224px]">
       <div
         className="pointer-events-none absolute top-[190px] right-[-34px] hidden h-64 w-72 lg:block"
         aria-hidden

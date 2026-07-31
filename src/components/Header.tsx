@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { ArrowRight, Menu } from "lucide-react";
 import Container from "./Container";
 import Logo from "./Logo";
+import PillNav from "./PillNav";
 
 const navLinks = [
   { href: "/hire-ai-talent", label: "Hire AI talent" },
@@ -16,29 +17,17 @@ const navLinks = [
 export default function Header() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const isHome = pathname === "/";
 
   return (
     <header className="sticky top-0 z-50 bg-neutral-900/95 shadow-[0px_2px_4px_-2px_rgba(16,24,40,0.06),0px_4px_8px_-2px_rgba(16,24,40,0.10)] backdrop-blur-[5px]">
       <Container className="flex h-16 items-center justify-between md:h-20">
         <Logo />
-        <nav className="hidden items-center gap-8 md:flex">
-          {navLinks.map((link) => {
-            const isActive = pathname === link.href;
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`border-b-2 p-1 text-base transition-colors ${
-                  isActive
-                    ? "border-lime-200 font-bold text-white"
-                    : "border-transparent font-medium text-zinc-300 hover:text-white"
-                }`}
-              >
-                {link.label}
-              </Link>
-            );
-          })}
-        </nav>
+        {!isHome && (
+          <div className="hidden md:flex">
+            <PillNav size="sm" />
+          </div>
+        )}
         <Link
           href="https://workspace.index.dev/register"
           className="hidden items-center gap-2 text-base font-medium text-white transition-colors hover:text-lime-200 md:flex"
