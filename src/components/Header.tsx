@@ -21,10 +21,10 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-neutral-900/95 shadow-[0px_2px_4px_-2px_rgba(16,24,40,0.06),0px_4px_8px_-2px_rgba(16,24,40,0.10)] backdrop-blur-[5px]">
-      <Container className="flex h-16 items-center justify-between md:h-20">
+      <Container className="relative flex h-16 items-center justify-between md:h-20">
         <Logo />
         {!isHome && (
-          <div className="hidden md:flex">
+          <div className="hidden md:absolute md:inset-y-0 md:left-1/2 md:flex md:-translate-x-1/2 md:items-center">
             <PillNav size="sm" />
           </div>
         )}

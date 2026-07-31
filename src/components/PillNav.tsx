@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -11,8 +12,12 @@ const navLinks = [
 
 export default function PillNav({ size = "lg" }: { size?: "lg" | "sm" }) {
   const pathname = usePathname();
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const isLg = size === "lg";
   const activeFlags = navLinks.map((link) => pathname === link.href);
+  const highlightFlags = navLinks.map((_, index) =>
+    hoveredIndex !== null ? hoveredIndex === index : activeFlags[index]
+  );
 
   return (
     <div
@@ -23,31 +28,36 @@ export default function PillNav({ size = "lg" }: { size?: "lg" | "sm" }) {
       }`}
     >
       {navLinks.map((link, index) => {
-        const isActive = activeFlags[index];
-        const hideDivider =
-          index > 0 && (activeFlags[index - 1] || activeFlags[index]);
+        const isHighlighted = highlightFlags[index];
+        const blendDivider =
+          index > 0 && (highlightFlags[index - 1] || highlightFlags[index]);
 
         return (
           <div key={link.href} className="contents">
-            {index > 0 && !hideDivider && (
-              <span className="h-6 w-px bg-custom-neutral-900" aria-hidden />
+            {index > 0 && (
+              <span
+                className={`h-6 w-px transition-colors duration-200 ${
+                  blendDivider ? "bg-neutral-900" : "bg-custom-neutral-900"
+                }`}
+                aria-hidden
+              />
             )}
             <Link
               href={link.href}
               className={`relative flex ${isLg ? "px-7 py-3" : "px-5 py-1"}`}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
             >
-              {isActive && (
-                <span
-                  className="absolute inset-0 rounded-[50px] bg-custom-neutral-900"
-                  aria-hidden
-                />
-              )}
+              <span
+                className={`absolute inset-0 rounded-[50px] bg-custom-neutral-900 transition-opacity duration-200 ${
+                  isHighlighted ? "opacity-100" : "opacity-0"
+                }`}
+                aria-hidden
+              />
               <span className="relative flex items-center justify-center gap-2.5 p-1">
                 <span
                   className={`text-base font-medium transition-colors ${
-                    isActive
-                      ? "text-lime-200"
-                      : "text-[#D9D9D9] hover:text-white"
+                    isHighlighted ? "text-lime-200" : "text-[#D9D9D9]"
                   }`}
                 >
                   {link.label}
