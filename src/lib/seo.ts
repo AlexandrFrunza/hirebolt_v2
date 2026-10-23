@@ -4,18 +4,22 @@ export function pageMetadata({
   title,
   description,
   path,
+  ogTitle = title,
+  ogDescription = description,
 }: {
   title: string;
   description: string;
   path: string;
+  ogTitle?: string;
+  ogDescription?: string;
 }): Metadata {
   return {
     title,
     description,
     alternates: { canonical: path },
     openGraph: {
-      title,
-      description,
+      title: ogTitle,
+      description: ogDescription,
       url: path,
       siteName: "Hirebolt",
       type: "website",
@@ -23,8 +27,8 @@ export function pageMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title,
-      description,
+      title: ogTitle,
+      description: ogDescription,
     },
   };
 }

@@ -21,6 +21,9 @@ const fraunces = Fraunces({
 const title = "Hirebolt — High quality human intelligence for frontier AI";
 const description =
   "Hirebolt helps AI companies access specialist talent, AI training workflows, and engineering capacity through a global network of vetted contributors, engineers, and domain experts.";
+const ogTitle = "High quality human intelligence for frontiers AI";
+const ogDescription =
+  "Specialist talent, AI training workflows, and engineering capacity — on demand.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://hirebolt.com"),
@@ -31,8 +34,8 @@ export const metadata: Metadata = {
   description,
   alternates: { canonical: "/" },
   openGraph: {
-    title,
-    description,
+    title: ogTitle,
+    description: ogDescription,
     url: "/",
     siteName: "Hirebolt",
     type: "website",
@@ -40,8 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title,
-    description,
+    title: ogTitle,
+    description: ogDescription,
   },
   robots: {
     index: true,

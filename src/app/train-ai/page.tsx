@@ -15,6 +15,9 @@ export const metadata: Metadata = pageMetadata({
   description:
     "Build stronger models with expert-led evaluation, benchmarks, post-training datasets, and human feedback workflows from Hirebolt's specialist talent network.",
   path: "/train-ai",
+  ogTitle: "Human intelligence for AI training and evaluation",
+  ogDescription:
+    "Expert-led evaluation, benchmarks, post-training datasets, and human feedback workdlows.",
 });
 
 export default function TrainAI() {

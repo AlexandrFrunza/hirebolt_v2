@@ -13,6 +13,9 @@ export const metadata: Metadata = pageMetadata({
   description:
     "Hirebolt helps teams turn AI models into working products — copilots, agents, and RAG systems — with vetted AI engineers handling model selection, integration, and delivery.",
   path: "/build-ai",
+  ogTitle: "Turn AI models into working products",
+  ogDescription:
+    "Vetted AI engineers handling model selection, integration, and delivery.",
 });
 
 export default function BuildAI() {

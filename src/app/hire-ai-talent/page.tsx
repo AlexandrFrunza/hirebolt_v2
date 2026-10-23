@@ -15,6 +15,9 @@ export const metadata: Metadata = pageMetadata({
   description:
     "Access a global network of verified AI engineers, AI-augmented teams, and expert evaluators. Search, shortlist, and start interviewing vetted AI talent in seconds.",
   path: "/hire-ai-talent",
+  ogTitle: "AI engineering capacity. Made simple",
+  ogDescription:
+    "Search a global network of verified engineers, AI-augmented teams, and expert evaluators.",
 });
 
 export default function HireAITalent() {
