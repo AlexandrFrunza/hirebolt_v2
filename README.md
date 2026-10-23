@@ -4,7 +4,7 @@ Hirebolt marketing site — Next.js + Tailwind CSS, deployed to Cloudflare Pages
 
 ## Getting Started
 
-First, run the development server:
+First, run the development server: 
 
 ```bash
 npm run dev
